@@ -1,0 +1,17 @@
+<% if flash[:notice] %>
+<%= flash[:notice]%>
+<% end %>
+
+<%= form_for(@user, url: sign_in_path) do |f| %>
+
+  <%= f.label :username %>
+  <%= f.text_field :username%>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Submit" %>
+
+  <% end %>
+
+   <div><%= link_to "Sign up", sign_up_path, :style=>'color: red;' %></div>

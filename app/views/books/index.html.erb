@@ -1,0 +1,26 @@
+<%= paginate @books %>
+ <div class="col-sm-2">
+<%= form_tag books_path, :method => 'get' do %>
+ 
+    <%= text_field_tag :search, params[:search], :class=>"form-control",  :placeholder=>"search" %>
+    <%= submit_tag "Search", :class=>"btn btn-info"%>
+  
+<% end %>
+</div>
+
+<div class="image_container">
+<% @books.each do |book|%>
+<div class="col-sm-3"> 
+  <%= image_tag(book.attachment.url) %> 
+  <%= content_tag(:p, book.title)%>
+  <%= content_tag(:p, book.created_at)%>
+</div>
+  <% end %>
+</div>
+
+
+
+
+<!-- <div class="col-sm-2">
+  <input type="search" class="form-control"  placeholder="search">
+</div> -->

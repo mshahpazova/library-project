@@ -1,0 +1,20 @@
+   <%= form_for @book, html: { multipart: true } do |f| %>
+      <% if @book.errors.present? %>
+         <ul>
+            <% @book.errors.full_messages.each do |error_message| %>
+               <li><%= error_message %></li>
+            <% end %>
+         </ul>
+      <% end %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.label :attachment %>
+      <%= f.file_field :attachment %>
+      <%= f.label :genre %>
+      <%= f.select :genre, ['horror', 'comedy', 'fantasy', 'biography'] %>
+      <%= f.label :book_count %>
+      <%= f.text_field :page_count %>
+      <%= f.submit "Save", class: "btn btn-primary" %>
+   <% end %>
+    

@@ -1,0 +1,14 @@
+<% if flash[:notice] %>
+<p> <%= flash[:notice]%></p>
+<% end %>
+<%= form_for(@user, url: sign_up_path) do |f| %>
+
+  <div> <%= f.label :username %>
+  <%= f.text_field :username %></div>
+
+  <div> <%= f.label :password %>
+  <%= f.password_field :password %></div> 
+  
+  <%= f.submit "Submit" %>
+ <% end %>
+
