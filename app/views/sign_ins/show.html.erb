@@ -1,17 +1,24 @@
-<% if flash[:notice] %>
-<%= flash[:notice]%>
-<% end %>
-
-<%= form_for(@user, url: sign_in_path) do |f| %>
-
-  <%= f.label :username %>
-  <%= f.text_field :username%>
-
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.submit "Submit" %>
-
+<div class="well">
+  <h1>Library</h1>
+  <% if flash[:notice] %>
+    <%= flash[:notice]%>
   <% end %>
 
-   <div><%= link_to "Sign up", sign_up_path, :style=>'color: red;' %></div>
+  <%= form_for(@user, url: sign_in_path) do |f| %>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <%= f.label :username %>
+        <%= f.text_field :username, :class=>"form-control" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <%= f.label :password %>
+        <%= f.password_field :password, :class=>"form-control" %>
+      </div>
+    </div>
+    <%= f.submit "Sign In", :class=>"btn btn-primary" %>
+    <%= link_to "Sign up", sign_up_path, :class=>"btn btn-default" %>
+  <% end %>
+</div>

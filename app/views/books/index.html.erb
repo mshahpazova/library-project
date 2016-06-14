@@ -1,26 +1,33 @@
-<%= paginate @books %>
- <div class="col-sm-2">
-<%= form_tag books_path, :method => 'get' do %>
- 
-    <%= text_field_tag :search, params[:search], :class=>"form-control",  :placeholder=>"search" %>
-    <%= submit_tag "Search", :class=>"btn btn-info"%>
-  
-<% end %>
-</div>
-
-<div class="image_container">
-<% @books.each do |book|%>
-<div class="col-sm-3"> 
-  <%= image_tag(book.attachment.url) %> 
-  <%= content_tag(:p, book.title)%>
-  <%= content_tag(:p, book.created_at)%>
-</div>
+<%= render partial: "navbar", object: @current_user %>
+<div class="well">
+  <h1>Books</h1>
+  <%= paginate @books %>
+  <div>
+    <%= form_tag books_path, :method => 'get' do %>
+      <div class="row">
+        <div class="form-group col-md-10 col-lg-4">
+          <%= text_field_tag :search, params[:search], :class=>"form-control",  :placeholder=>"search" %>
+        </div>
+        <%= submit_tag "Search", :class=>"btn btn-info col-md-1" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="image-container">
+  <% @books.each do |book|%>
+    <div class="col-xs-6 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag(book.attachment.url) %> 
+        <div class="caption">
+          <h3>
+            <%= content_tag(:p, book.title)%>
+          </h3>
+          <%= content_tag(:p, book.created_at)%>
+        </div>
+      </div>
+    </div>
   <% end %>
+  </div>
+  <!-- <div class="col-sm-2">
+    <input type="search" class="form-control"  placeholder="search">
+  </div> -->
 </div>
-
-
-
-
-<!-- <div class="col-sm-2">
-  <input type="search" class="form-control"  placeholder="search">
-</div> -->

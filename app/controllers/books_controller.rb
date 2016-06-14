@@ -3,7 +3,6 @@ class BooksController < ApplicationController
   def index
     if params[:search]
       @books = Book.search(params[:search]).page(params[:page]).per(2)
-      debugger
     else
       @books = Book.descending.page(params[:page]).per(6)
     end

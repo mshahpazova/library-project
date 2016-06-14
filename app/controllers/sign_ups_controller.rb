@@ -5,7 +5,7 @@ class SignUpsController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    debugger
+    # debugger
     if @user.save
        session[:user_id] = @user.id
       redirect_to books_path, notice: "Sign up successful"

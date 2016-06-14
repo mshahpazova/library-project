@@ -12,15 +12,8 @@ class Book < ActiveRecord::Base
       :maximum => 1.megabyte
       } 
 
-
-
   def self.search(search)
-    if search
       where('title LIKE ?', "%#{search}%").all
-    else
-      find(:all)
-    end
+      where('genre LIKE ?', "%#{search}%").all
   end
-
 end
-
