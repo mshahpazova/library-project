@@ -1,4 +1,6 @@
-   <%= form_for @book, html: { multipart: true } do |f| %>
+<h2 class="form-signin-heading">Add a new book</h2> 
+<div class="form-horizontal">
+   <%= form_for @book,  html: { multipart: true } do |f| %>
       <% if @book.errors.present? %>
          <ul>
             <% @book.errors.full_messages.each do |error_message| %>
@@ -8,13 +10,16 @@
       <% end %>
 
       <%= f.label :title %>
-      <%= f.text_field :title %>
-      <%= f.label :attachment %>
-      <%= f.file_field :attachment %>
-      <%= f.label :genre %>
-      <%= f.select :genre, ['horror', 'comedy', 'fantasy', 'biography'] %>
+     <div class="form-control"> <%= f.text_field :title %> </div>
       <%= f.label :book_count %>
-      <%= f.text_field :page_count %>
-      <%= f.submit "Save", class: "btn btn-primary" %>
+      <%= f.label :attachment %> 
+      <div class="form-control"><%= f.file_field :attachment %> </div>
+      <%= f.label :book_count %>
+      <%= f.label :genre %>
+     <div class="form-control"> <%= f.select :genre, ['horror', 'comedy', 'fantasy', 'biography'] %></div>
+      <%= f.label :book_count %></div>
+     <div class="form-control"> <%= f.text_field :page_count %>
+     <div class="form-control"> <%= f.submit "Save", class: "btn btn-primary" %></div>
    <% end %>
+   </div>
     

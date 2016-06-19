@@ -1,10 +1,76 @@
+@font-face {
+  font-family: "Gothic-Diamond";
+  src: url(Diamond-Gothic-V3.otf) format("truetype");
+}
+
+#welcome-container {
+  height: 750px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: url(underwater_library_by_studio_sunshine-d3a6nbp.jpg) 
+    top center 
+    no-repeat 
+    black;
+}
+
+#header {
+  text-align: center;
+}
+
+#header h1 { 
+  font-family: Gothic-Diamond;
+}
+
+#header h2 {
+  font-family: Gothic-Diamond;
+}
+/*html, body, .well {
+  height:100%;
+  background-color: blue !important;
+}*/
+
+/*.well {
+
+    background: url("mehrmaids.jpg") no-repeat;
+
+ 
+  
+  margin-bottom: 0px !important;
+}*/
+
 .image-container img {
   background-color: green; 
   max-width: 100%;
   max-height: 200px;
 }
 
-.image-container .col-sm-3 {
-  margin-bottom: 5%;
+.image-container .image {
   height: 200px;
+  text-align: center;
+}
+
+#image-view img{
+  padding: 10px;
+  height: 300px;
+  display: inline;
+}
+
+
+/*.image-container .col-md-4 {
+  margin-bottom: 5%;
+  height: 350px;
+}*/
+.thumbnail{
+  background-image: url("light-blue-texture.jpg") !important;
+}
+
+#title {
+  font-family: "Gothic-Diamond";
+}
+#welcome-container {
+  background: url(underwater_library_by_studio_sunshine-d3a6nbp.jpg);
+        width: 100%, 100%;
+       /* height: 100%;*/
+      margin: 0 auto;
 }

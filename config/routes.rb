@@ -2,11 +2,13 @@ Rails.application.routes.draw do
   resources :books
   resource :sign_in, only: [:new, :show, :create]
   resource :sign_up, only: [:show, :create]
+  resource :welcome, only: [:show]
+  resource :sign_out, only: [:destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'books#new'
+   root 'welcomes#show'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,24 +1,26 @@
-<div class="well">
-  <h1>Library</h1>
+
   <% if flash[:notice] %>
     <%= flash[:notice]%>
-  <% end %>
+  <% end %> 
 
   <%= form_for(@user, url: sign_in_path) do |f| %>
-    <div class="row">
-      <div class="form-group col-md-6">
-        <%= f.label :username %>
-        <%= f.text_field :username, :class=>"form-control" %>
+    <div class="container">
+      <h2 class="form-signin-heading">Please sign in</h2> 
+      <div class="row">
+        <div class="form-group col-md-4">
+          <%= f.label :username %>
+          <%= f.text_field :username, :class=>"form-control" %> 
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="form-group col-md-6">
-        <%= f.label :password %>
-        <%= f.password_field :password, :class=>"form-control" %>
+      <div class="row">
+        <div class="form-group col-md-4">
+          <%= f.label :password %>
+          <%= f.password_field :password, :class=>"form-control" %>
+        </div>
       </div>
+      <%= f.submit "Sign In", :class=>"btn btn-primary" %>
+      <%= link_to "Sign up", sign_up_path, :class=>"btn btn-default" %>
     </div>
-    <%= f.submit "Sign In", :class=>"btn btn-primary" %>
-    <%= link_to "Sign up", sign_up_path, :class=>"btn btn-default" %>
   <% end %>
-</div>
+

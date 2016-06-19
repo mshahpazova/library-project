@@ -13,7 +13,7 @@ class Book < ActiveRecord::Base
       } 
 
   def self.search(search)
-      where('title LIKE ?', "%#{search}%").all
-      where('genre LIKE ?', "%#{search}%").all
+      where('title LIKE ? OR genre LIKE ?',"%#{search}%", "%#{search}%") 
+       # where('genre LIKE ?', "%#{search}%").all
   end
 end

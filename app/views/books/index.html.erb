@@ -16,18 +16,20 @@
   <% @books.each do |book|%>
     <div class="col-xs-6 col-md-4">
       <div class="thumbnail">
-        <%= image_tag(book.attachment.url) %> 
+        <div class="image">
+          <%= link_to(image_tag(book.attachment.url), book_path(book)) %> 
+        </div>
         <div class="caption">
           <h3>
             <%= content_tag(:p, book.title)%>
           </h3>
-          <%= content_tag(:p, book.created_at)%>
+          <%= content_tag(:p, "#{book.created_at.strftime("%d %b. %Y")}")%>
         </div>
       </div>
     </div>
   <% end %>
   </div>
-  <!-- <div class="col-sm-2">
-    <input type="search" class="form-control"  placeholder="search">
-  </div> -->
+<!--     <div class="col-sm-2">
+      <input type="search" class="form-control"  placeholder="search">
+    </div> -->
 </div>

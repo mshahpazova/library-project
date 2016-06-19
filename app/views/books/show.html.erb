@@ -1,1 +1,19 @@
-<%= @book.genre %>
+ <div id="image-box">
+  <div id="image-view">
+    <%= image_tag(@book.attachment.url) %> 
+  </div>
+ </div>
+  <div class="caption">
+    <h3>
+      <%= content_tag(:p, "Title: #{@book.title}")%>
+    </h3>
+       <h4>
+      <%= content_tag(:p, "Genre: #{@book.genre}")%>
+    </h4>
+    <%= content_tag(:p, "This book was uploaded on #{@book.created_at.strftime("%d %b. %Y")}")%>
+
+<div id="delete"><%= link_to 'Delete book', @book, method: :destroy, data: {confirm: 'Are you sure you want to delete this book?'}%> </div>
+  </div>
+
+
+  

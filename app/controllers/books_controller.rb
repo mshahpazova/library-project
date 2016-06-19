@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
   before_filter :authenticate
   def index
-    if params[:search]
+    if params[:search].present?
       @books = Book.search(params[:search]).page(params[:page]).per(2)
     else
       @books = Book.descending.page(params[:page]).per(6)
@@ -20,7 +20,6 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     if @book.save
       redirect_to books_path
-      # redirect_to book_path(@book)
     else
       render action: :new
     end
