@@ -25,19 +25,6 @@
 #header h2 {
   font-family: Gothic-Diamond;
 }
-/*html, body, .well {
-  height:100%;
-  background-color: blue !important;
-}*/
-
-/*.well {
-
-    background: url("mehrmaids.jpg") no-repeat;
-
- 
-  
-  margin-bottom: 0px !important;
-}*/
 
 .image-container img {
   background-color: green; 
@@ -57,11 +44,6 @@ html body div.center-block.col-md-3.thumbnail div#image-box div#image-view img {
   display: block;
 }
 
-
-/*.image-container .col-md-4 {
-  margin-bottom: 5%;
-  height: 350px;
-}*/
 .thumbnail {
   background-image: url("light-blue-texture.jpg") !important;
 }
@@ -69,10 +51,10 @@ html body div.center-block.col-md-3.thumbnail div#image-box div#image-view img {
 #title {
   font-family: "Gothic-Diamond";
 }
+
 #welcome-container {
   background: url(underwater_library_by_studio_sunshine-d3a6nbp.jpg);
         width: 100%, 100%;
-       /* height: 100%;*/
       margin: 0 auto;
 }
 
