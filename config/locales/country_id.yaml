@@ -1,0 +1,4 @@
+time:
+ formats:
+  your_format: '%d %b. %Y'
+  your_another_format: '%I:%M'

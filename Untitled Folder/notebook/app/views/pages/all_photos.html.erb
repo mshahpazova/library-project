@@ -1,0 +1,4 @@
+<% @photos.each do |photo| %>
+<%= image_tag "/"+ photo.path %>
+<%#= image_tag serve_page_path(@current_page, :ph_id => photo.id), :width => "240"%>
+<% end %>

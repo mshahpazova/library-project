@@ -1,0 +1,14 @@
+
+<%= form_for(@user, url: sign_in_path) do |f| %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Submit" %>
+
+ <div><%= link_to "Sign up", sign_up_path, :style=>'color: red;' %></div>
+ <% end %>
+  

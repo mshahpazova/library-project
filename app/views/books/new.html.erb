@@ -1,5 +1,5 @@
 <h2 class="form-signin-heading">Add a new book</h2> 
-<div class="form-horizontal">
+<div class="form-horizontal col-md-4">
    <%= form_for @book,  html: { multipart: true } do |f| %>
       <% if @book.errors.present? %>
          <ul>
@@ -14,12 +14,15 @@
       <%= f.label :book_count %>
       <%= f.label :attachment %> 
       <div class="form-control"><%= f.file_field :attachment %> </div>
-      <%= f.label :book_count %>
       <%= f.label :genre %>
+      
      <div class="form-control"> <%= f.select :genre, ['horror', 'comedy', 'fantasy', 'biography'] %></div>
-      <%= f.label :book_count %></div>
-     <div class="form-control"> <%= f.text_field :page_count %>
-     <div class="form-control"> <%= f.submit "Save", class: "btn btn-primary" %></div>
+      <%= f.label :book_count %>
+<div class="form-control"> <%= f.text_field :page_count %>
+     
+      </div>
+      <div class="form-control"> <%= f.submit "Save", class: "btn btn-primary" %></div>
+     
    <% end %>
    </div>
     

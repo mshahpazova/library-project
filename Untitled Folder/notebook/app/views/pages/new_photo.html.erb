@@ -1,0 +1,4 @@
+<%= form_tag({action: :upload_photo}, multipart: true) do %>
+  <%= file_field_tag 'picture' %>
+  <input type="submit" value="Submit Photo"></input>
+<% end %> 

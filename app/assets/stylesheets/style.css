@@ -50,10 +50,11 @@
   text-align: center;
 }
 
-#image-view img{
+html body div.center-block.col-md-3.thumbnail div#image-box div#image-view img {
   padding: 10px;
   height: 300px;
-  display: inline;
+  margin: 0 auto;
+  display: block;
 }
 
 
@@ -61,7 +62,7 @@
   margin-bottom: 5%;
   height: 350px;
 }*/
-.thumbnail{
+.thumbnail {
   background-image: url("light-blue-texture.jpg") !important;
 }
 
@@ -73,4 +74,24 @@
         width: 100%, 100%;
        /* height: 100%;*/
       margin: 0 auto;
+}
+
+a:hover {
+  text-decoration: none !important;
+} 
+
+div.center-block {
+  float: none;
+}
+
+#new_book .form-control {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.form-control input, .form-control select {
+  width: 100%;
+  height: 100%;
+  border: none;
+
 }
