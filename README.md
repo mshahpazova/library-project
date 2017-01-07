@@ -9,7 +9,7 @@
 
 ## Routes
 
-* /books - shows a grid of all the books with a searchfield
-* /books/new - a route for inserting new books in the library
-* /sign_up - user registration page
-* /sign_in - user login page
+* `/books` - shows a grid of all the books with a searchfield
+* `/books/new` - a route for inserting new books in the library
+* `/sign_up` - user registration page
+* `/sign_in` - user login page
